@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPECTANGULAR!!</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="app" ng-cloak>
+<md-nav-bar>
+    <md-nav-item md-nav-href="#/" >HOME</md-nav-item>
+    <md-nav-item md-nav-href="#/setup" >Setup</md-nav-item>
+    <md-nav-item md-nav-href="#/modules" >Modules</md-nav-item>
+    <md-nav-item md-nav-href="#/ctrl" >Controllers</md-nav-item>
+    <md-nav-item md-nav-href="#/directive" >Directives</md-nav-item>
+    <md-nav-item md-nav-href="#/service" >Services</md-nav-item>
+</md-nav-bar>
+
+    <content ng-view></content>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.5.0/angular-route.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+
+<script src="services/special.service.js"></script>
+
+<script src="index/index.module.js"></script>
+<script src="index/index.route.js"></script>
+
+<script src="setup/setup.module.js"></script>
+<script src="setup/setup.route.js"></script>
+
+<script src="modules/modules.module.js"></script>
+<script src="modules/modules.route.js"></script>
+
+<script src="ctrl/ctrl.module.js"></script>
+<script src="ctrl/ctrl.route.js"></script>
+<script src="ctrl/ctrl.controller.js"></script>
+
+<script src="directive/directive.module.js"></script>
+<script src="directive/directive.route.js"></script>
+<script src="directive/directive.controller.js"></script>
+
+<script src="services/service.module.js"></script>
+<script src="services/service.route.js"></script>
+<script src="services/service.controller.js"></script>
+
+</html>

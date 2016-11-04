@@ -1,0 +1,24 @@
+<md-card>
+    <md-card-header-text><h1>Modules are your building blocks</h1></md-card-header-text>
+    <md-card-content>
+        <blockquote>
+          <pre>
+            <code>
+                (function(){
+                    'use strict';
+                    angular.module('app', [ <strong> <=== Module Declaration </strong>
+
+                        'ngRoute',          <strong> <=== Dependency </strong>
+
+                        'app.setup',        <strong> <=== Child Modules </strong>
+                        'app.modules'
+                    ]);
+                })();
+            </code>
+          </pre>
+        </blockquote>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="center center">
+        <md-button href="#/modules">BACK</md-button>
+    </md-card-actions>
+</md-card>

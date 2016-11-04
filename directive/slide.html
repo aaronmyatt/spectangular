@@ -1,0 +1,82 @@
+<h1>Directives</h1>
+<md-card>
+    <md-card-header-text><h1>directiveController</h1></md-card-header-text>
+    <md-card-content>
+        <blockquote>
+          <pre>
+              <code>
+               (function(){
+            "use strict";
+            angular.module('app.directive')
+                .controller('directiveController', directiveController);
+
+            directiveController.$inject = ['$scope'];
+            function directiveController($scope){
+
+                $scope.capitaliseVar = capitaliseVar;
+                $scope.addToArray = addToArray;
+
+                $scope.var1 = "Gardening, really?";
+                $scope.arbitraryArray = [];
+
+                function capitaliseVar(v){
+                    return v.toUpperCase();
+                }
+
+                function addToArray(){
+                    var num = $scope.arbitraryArray.length + 1;
+                    $scope.arbitraryArray.push(num);
+                }
+            }
+        })();
+              </code>
+          </pre>
+        </blockquote>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="center center">
+        <md-button href="#/directive">BACK</md-button>
+    </md-card-actions>
+</md-card>
+
+<md-card>
+    <md-card-header-text><h1>Template</h1></md-card-header-text>
+    <md-card-content>
+        <blockquote>
+          <pre>
+              <code>
+            &ltcontent ng-controller="directiveController" ng-init="init_var='A potentially useful place to initialise your view'"&gt
+
+            &ltstrong&gtFeed me:  &lt/strong&gt&ltinput type="text" ng-model="var1"&gt
+
+            &lttable&gt
+                &lttr&gt
+                    &lttd&gtStatic:&lt/td&gt
+                    &lttd ng-disabled&gt {{var1}} &lt/td&gt
+                &lt/tr&gt
+                &lttr&gt
+                    &lttd&gtShow/Hide:&lt/td&gt
+                    &lttd ng-show="var1"&gt PEEKABOO! &lt/td&gt
+                &lt/tr&gt
+                &lttr&gt
+                    &lttd&gtInit Variable:&lt/td&gt
+                    &lttd&gt {{capitaliseVar(init_var)}} &lt/td&gt
+                &lt/tr&gt
+                &lttr&gt
+                    &lttd&gt Easy iteration! &lt/td&gt
+                    &lttd&gt &ltbutton ng-click="addToArray()"&gtIncrement&lt/button&gt&lt/td&gt
+                &lt/tr&gt
+                &lttr ng-repeat="element in arbitraryArray"&gt
+                    &lttd&gt {{element}} &lt/td&gt
+                    &lttd&gt MORE INTERESTING GARDENING FACTS &lt/td&gt
+                &lt/tr&gt
+            &lt/table&gt
+
+        &lt/content&gt
+              </code>
+          </pre>
+        </blockquote>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="center center">
+        <md-button href="#/directive">BACK</md-button>
+    </md-card-actions>
+</md-card>

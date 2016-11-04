@@ -1,0 +1,30 @@
+<md-card>
+    <md-card-header-text><h1>The minimal setup</h1></md-card-header-text>
+    <md-card-content>
+        <blockquote>
+          <pre>
+            <code>
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en" ng-app="app"&gt <strong> <=== ng-app is important</strong>
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+    &lt/head&gt
+    &ltbody&gt
+    &lt/body&gt
+    &ltscript src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"&gt&lt/script&gt
+    &ltscript src="https://code.angularjs.org/1.5.0/angular-route.js"&gt&lt/script&gt
+    &ltscript&gt
+        (function(){
+            'use strict';
+            angular.module('app', ['ngRoute']);
+        })();
+    &lt/script&gt
+    &lt/html&gt
+            </code>
+          </pre>
+        </blockquote>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="center center">
+        <md-button href="#/setup">BACK</md-button>
+    </md-card-actions>
+</md-card>

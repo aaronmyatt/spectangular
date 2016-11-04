@@ -1,0 +1,37 @@
+<md-card>
+    <md-card-header-text><h1>Services</h1></md-card-header-text>
+    <md-card-content>
+        <md-card-actions layout="row" layout-align="center center">
+            <md-button class="md-raised md-primary" href="#/service/s">SLIDE</md-button>
+        </md-card-actions>
+        <h2>Your Reagents</h2>
+        <h2>When it comes time to enhance your plants, you go all Monsanto on their asses!</h2>
+        <h2>Services allow you to write neat interfaces to external apis</h2>
+        <h2>Or package up processing so that it can be shared among all your modules</h2>
+    </md-card-content>
+</md-card>
+<md-card ng-controller="serviceController">
+        <h3>EXAMPLE:</h3>
+    <md-card-content layout="row">
+        <md-card-actions flex>
+            <md-input-container>
+                <b>Feed Service:</b> (Don't forget to update)
+                <input type="text" ng-model="update">
+            </md-input-container>
+            <md-button ng-click="updateService()"><strong>UPDATE</strong></md-button>
+
+            <md-input-container>
+                <label>Pending update:</label> (Notice this cannot be changed directly)
+                <input ng-disabled="true" placeholder="{{update}}">
+            </md-input-container>
+
+        </md-card-actions>
+
+        <md-list flex>
+            <md-subheader>Service Content</md-subheader>
+            <md-list-item ng-repeat="data in special.query()" ng-click="null">
+                <p ng-disabled> {{data}} </p>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+</md-card>

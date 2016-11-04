@@ -1,0 +1,41 @@
+<md-card>
+    <md-card-header-text><h1>A Very Special Service</h1></md-card-header-text>
+    <md-card-content>
+        <blockquote>
+          <pre>
+              <code>
+                (function(){
+                    'use strict';
+
+                    angular.module('app.special-service', [])
+                        .service('specialService', specialService);
+
+                    specialService.$inject = [];
+                    function specialService(){
+                        var content = ['this', 'service', 'contains', 'alot', 'of', 'important', 'spam'];
+
+                        var service = this;
+
+                        service.query = query;
+                        service.update = update;
+
+                        return service;
+
+                        function query(){
+                            return content;
+                        }
+
+                        function update(spam){
+                            content.push(spam);
+                            return content;
+                        }
+                    }
+                })();
+              </code>
+          </pre>
+        </blockquote>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="center center">
+        <md-button href="#/service">BACK</md-button>
+    </md-card-actions>
+</md-card>

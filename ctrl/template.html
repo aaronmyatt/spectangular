@@ -1,0 +1,33 @@
+<md-card>
+    <md-card-header-text><h1>Controllers</h1></md-card-header-text>
+    <img class="slide-img" src="img/respect_the_gardener.jpg" alt="pay the gardener">
+    <md-card-content>
+        <md-card-actions layout="row" layout-align="center center">
+            <md-button class="md-raised md-primary" href="#/service/s">SLIDE</md-button>
+        </md-card-actions>
+        <h2>The Gardener</h2>
+        <h2>Controllers manage the flow of data between your view/template and backend</h2>
+    </md-card-content>
+</md-card>
+<md-card ng-controller="ctrlController">
+    <h3>EXAMPLE:</h3>
+    <md-card-content layout="row">
+        <md-card-actions flex>
+            <md-input-container>
+                <b>Feed Me:</b>
+                <input type="text" ng-model="var3">
+            </md-input-container>
+        </md-card-actions>
+
+        <md-list flex>
+            <md-subheader>Dynamic Templates!</md-subheader>
+            <md-list-item class="md-3-line">
+                <div class="md-list-item-text" layout="column">
+                    <p> Static: {{var1}} </p>
+                    <p> Bound to input: {{var3}}</p>
+                    <p> Piped through a function: {{capitaliseVar(var3)}}</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+</md-card>
